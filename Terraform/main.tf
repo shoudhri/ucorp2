@@ -1,3 +1,7 @@
+terraform {
+  backend "azure" {}
+ }
+
 # We strongly recommend using the required_providers block to set the
 # Azure Provider source and version being used
 terraform {
@@ -16,10 +20,13 @@ provider "azurerm" {
 
 # Create a resource group
 resource "azurerm_resource_group" "rg" {
-  name     = "terraformpoc"
+  name     = "terraformpoc1"
   location = "South India"
   tags = {
     environment = "dev"
     source      = "Terraform"
   }
 }
+
+
+
